@@ -17,3 +17,4 @@ sed -i 's/,/;g__/1' "$WORKFILE"
 sed -i 's/,/;s__/1' "$WORKFILE"
 sed -i 's/,.*//' "$WORKFILE"
 sed 's/\(;[a-z]__\)\(;.*\)\{0,\}$//' "$WORKFILE" > "$OUTPUT"
+sed 's/;k/\tk/g' "$WORKFILE" > "$OUTPUT"_tab
