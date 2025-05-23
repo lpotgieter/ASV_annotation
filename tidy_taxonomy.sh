@@ -6,8 +6,6 @@ WORKFILE="work"
 OUTPUT="tidied_taxonomy"
 
 awk '{print $1}' "$INPUT" > "$WORKFILE"
-
-awk '{print $1}' ncbi_lineages_2025-05-23.csv > "$WORKFILE"
 sed -i 's/,/;k__/1' "$WORKFILE"
 sed -i 's/,/;p__/1' "$WORKFILE"
 sed -i 's/,/;c__/1' "$WORKFILE"
